@@ -45,3 +45,71 @@ const walk = person.walk;
 walk();
 
 ```
+
+This situation happened because of the 'this' keyword. If it _called a function as a method in an object_, **this will always return a reference to that object.**
+However, if you call a function as a _standalone object_, or outside of an object, **this will return the global object, which is the window object in browsers. And, if the strict mode is enabled, this will return UNDEFINED.**
+
+**Every function in JavaScript is an Object.** One of the most important methods is BIND, with this method, we can set a value of the object permanently. The argument of **This** is based/attached on the argument of the method.
+
+```
+// with the instatiation, the problem is fixed.
+const walk = person.walk.bind(person);
+walk();
+```
+
+## Arrow Functions
+
+```
+const square = (number) => {
+    return number*number;
+};
+```
+
+Something you need to know about arrow functions is that they dont rebind **This**.
+
+```
+const person = {
+    talk(){
+        setTimeout(() => {
+            console.log("this",this);
+        },1000);
+    };
+};
+
+person.talk();
+```
+
+## Map
+
+```
+const colors = ['red','green','blue'];
+
+// introducing template literals (using html) and the map function.
+const items = colors.map(color => {
+    return `<li> ${color}</li>`;
+});
+console.log(items);
+```
+
+Used to render lists.
+
+## Object Destructuring
+
+```
+const address = {
+    street: '',
+    city: '',
+    country: ''
+};
+
+//destructuring syntax
+const {street: st, city: ci, country: cou} = address;
+
+// which basically is equivalent to:
+
+const street = address.street;
+const city = address.city;
+const country = address.country;
+
+
+```
