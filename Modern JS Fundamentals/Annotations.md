@@ -113,3 +113,15 @@ const country = address.country;
 
 
 ```
+
+## Spread Operator
+
+```
+const first = [1,2,3];
+const second = [4,5,6];
+
+// we get a new array with all the items from the first array, then we have 'a', all the elements from the second array, and then 'b'.
+const combined = [...first, 'a', ...second, 'b']
+```
+
+Used to easily clone an array.

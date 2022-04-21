@@ -8,3 +8,9 @@
 <p> I've changed the sounds to different ones. Check it out and have a surprise.
 
 ### Day 2: CSS + JS Clock
+
+<p> A JS application to show a clock on the screen that is dinamic, it gets the current time from your computer and moves the hands of the clock according to the time.
+
+### Day 3: Playing with CSS Variables and JS
+
+<p>
