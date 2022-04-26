@@ -13,4 +13,12 @@
 
 ### Day 3: Playing with CSS Variables and JS
 
+<p> Chaging CSS variables dinamicly with JS vanilla.
+
+### Day 4: Array Cardio Day 1
+
+<p> Studying important array methods with exercises.
+
+### Day 5: Flex Panels Image Gallery
+
 <p>
